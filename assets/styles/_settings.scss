@@ -1,0 +1,49 @@
+//Polices et textes
+@font-face {
+    font-family: "Shrikand";
+    src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto-bold";
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+//Les variables
+$font1: Shrikand, sans-serif;
+$font2: Roboto, serif;
+$font3: Roboto-bold, serif;
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$color1: #eaeaea;
+$color2: #353535;
+$white: white;
+
+//Les mixins
+@mixin childrenCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin alignChildren($space) {
+    display: flex;
+    align-items: center;
+    justify-content: $space;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $white;
+    text-align: center;
+    font-family: $font2;
+}
