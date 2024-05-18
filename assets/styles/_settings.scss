@@ -21,6 +21,8 @@ $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $color1: #eaeaea;
 $color2: #353535;
+$color3: #f6f6f6;
+$color4: #7e7e7e;
 $white: white;
 
 //Les mixins
@@ -34,6 +36,10 @@ $white: white;
     display: flex;
     align-items: center;
     justify-content: $space;
+}
+@mixin forMarge {
+    padding: 10px;
+    margin: 10px;
 }
 
 * {

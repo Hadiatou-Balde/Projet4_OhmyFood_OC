@@ -1,0 +1,82 @@
+.functioning {
+    padding: 55px 0;
+    background: $white;
+    h2 {
+        text-align: left;
+        margin: 30px;
+        font-size: 1.6rem;
+        font-family: $font1;
+    }
+
+    .funct_container {
+        @include childrenCenter;
+        flex-direction: column;
+        .icon_funct {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 15px;
+            margin: 10px 0;
+            border: 1px solid $color3;
+            border-radius: 30px;
+            background: $color3;
+            width: 280px;
+            height: 70px;
+            font-size: 1rem;
+            font-family: $font3;
+            
+            p{
+                text-align: right;
+            }
+            
+            i {
+                font-size: 1.1rem;
+                margin-left: 35px;
+                color: $color4;
+            }
+            .fa-store {
+                color: $primaire;
+            }
+
+            &:nth-child(1)::before {
+                content: "1";
+                width: 30px;
+                height: 28px;
+                border: 1px solid $primaire;
+                border-radius: 50px;
+                position: absolute;
+                left: -5%;
+                transform: translateY(5%);
+                background: $primaire;
+                color: $white;
+            }
+            &:nth-child(2)::before {
+                content: "2";
+                width: 30px;
+                height: 28px;
+                border: 1px solid $primaire;
+                border-radius: 50px;
+                position: absolute;
+                left: -5%;
+                transform: translateY(5%);
+                background: $primaire;
+                color: $white;
+            }
+            &:nth-child(3)::before {
+                content: "3";
+                width: 30px;
+                height: 28px;
+                border: 1px solid $primaire;
+                border-radius: 50px;
+                position: absolute;
+                left: -5%;
+                transform: translateY(5%);
+                background: $primaire;
+                color: $white;
+            }
+            
+        }
+    }
+}

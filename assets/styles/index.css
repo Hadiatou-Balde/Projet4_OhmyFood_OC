@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Shrikand";
   src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
@@ -74,7 +75,7 @@ header .icons form .search_bar input {
   text-align: center;
   border: none;
   background: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: Roboto-bold, serif;
 }
 header .icons form .search_bar input::-webkit-input-placeholder {
@@ -93,6 +94,146 @@ header .icons form .search_bar input::placeholder {
   color: #353535;
 }
 header .icons form .search_bar i {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-right: 10px;
+}
+
+.reserver {
+  padding: 55px 0;
+  background: #f6f6f6;
+}
+.reserver .reserv-container h2 {
+  font-size: 1.6rem;
+  padding: 10px;
+  margin: 10px;
+}
+.reserver .reserv-container p {
+  font-size: 1.1rem;
+  padding: 10px;
+  margin: 10px;
+}
+.reserver .reserv-container .btn_reserv {
+  margin: 20px 0;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), color-stop(50%), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, 50%, #FF79DA);
+  border: none;
+  color: white;
+  border-radius: 35px;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  font-size: 0.9rem;
+  padding: 16px;
+  font-family: Roboto-bold, serif;
+  -webkit-transition: -webkit-filter 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-filter 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  transition: filter 0.3s ease, box-shadow 0.3s ease, -webkit-filter 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.reserver .reserv-container .btn_reserv:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2); /* Augmente la luminosité */
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.functioning {
+  padding: 55px 0;
+  background: white;
+}
+.functioning h2 {
+  text-align: left;
+  margin: 30px;
+  font-size: 1.6rem;
+  font-family: Shrikand, sans-serif;
+}
+.functioning .funct_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.functioning .funct_container .icon_funct {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  margin: 10px 0;
+  border: 1px solid #f6f6f6;
+  border-radius: 30px;
+  background: #f6f6f6;
+  width: 280px;
+  height: 70px;
+  font-size: 1rem;
+  font-family: Roboto-bold, serif;
+}
+.functioning .funct_container .icon_funct p {
+  text-align: right;
+}
+.functioning .funct_container .icon_funct i {
+  font-size: 1.1rem;
+  margin-left: 35px;
+  color: #7e7e7e;
+}
+.functioning .funct_container .icon_funct .fa-store {
+  color: #9356DC;
+}
+.functioning .funct_container .icon_funct:nth-child(1)::before {
+  content: "1";
+  width: 30px;
+  height: 28px;
+  border: 1px solid #9356DC;
+  border-radius: 50px;
+  position: absolute;
+  left: -5%;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  background: #9356DC;
+  color: white;
+}
+.functioning .funct_container .icon_funct:nth-child(2)::before {
+  content: "2";
+  width: 30px;
+  height: 28px;
+  border: 1px solid #9356DC;
+  border-radius: 50px;
+  position: absolute;
+  left: -5%;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  background: #9356DC;
+  color: white;
+}
+.functioning .funct_container .icon_funct:nth-child(3)::before {
+  content: "3";
+  width: 30px;
+  height: 28px;
+  border: 1px solid #9356DC;
+  border-radius: 50px;
+  position: absolute;
+  left: -5%;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  background: #9356DC;
+  color: white;
 }/*# sourceMappingURL=index.css.map */
