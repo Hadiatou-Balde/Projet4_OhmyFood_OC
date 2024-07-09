@@ -4,9 +4,11 @@ header {
         height: 80px;
         background: $white;
         @include childrenCenter;
-
+        
         img {
             width: 50%;
+            object-fit: cover;
+            margin: 0 auto;
         }
     }
     .icons {

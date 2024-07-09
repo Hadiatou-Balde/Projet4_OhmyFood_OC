@@ -1,18 +1,31 @@
 .reserver {
-    padding: 55px 0;
+    padding: 30px 0;
     background: $color3;
     .reserv-container {
         h2 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             @include forMarge;
+            @media screen and (min-width: 1024px){
+                font-size: 1rem;
+            }
+            @media screen and (min-width: 768px){
+                font-size: 1.8rem;
+            }
+            
         }
         p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             @include forMarge;
+            @media screen and (min-width: 1024px){
+                font-size: 1rem;
+            }
+            @media screen and (min-width: 768px){
+                font-size: 1.3rem;
+            }
         }
         .btn_reserv {
             margin: 20px 0;
-            background: linear-gradient(to top left, $primaire, 50%, $secondaire);
+            @include gradient(0.9);
             border: none;
             color: $white;
             border-radius: 35px;
@@ -28,6 +41,12 @@
                 filter: brightness(1.2); /* Augmente la luminosité */
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
+
+            @media screen and (min-width: 768px){
+                width: 220px;
+                font-size: 1rem;
+            }
+            
             
         }
     }

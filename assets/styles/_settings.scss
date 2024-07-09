@@ -11,21 +11,31 @@
     font-family: "Roboto-bold";
     src: url("../fonts/Roboto/Roboto-Bold.ttf");
 }
+@font-face {
+    font-family: "Roboto-italic";
+    src: url("../fonts/Roboto/Roboto-Italic.ttf");
+}
 
 //Les variables
 $font1: Shrikand, sans-serif;
 $font2: Roboto, serif;
 $font3: Roboto-bold, serif;
-$primaire: #9356DC;
-$secondaire: #FF79DA;
+$font4: Roboto-italic, serif;
+$primaire: rgba(147, 86, 220, $opacity);
+$secondaire: rgba(255, 121, 218, $opacity);
 $tertiaire: #99E2D0;
 $color1: #eaeaea;
 $color2: #353535;
 $color3: #f6f6f6;
 $color4: #7e7e7e;
+$color5: #99e2d0;
 $white: white;
+$black: black;
 
 //Les mixins
+@mixin gradient($opacity) {
+    background: linear-gradient(to top, $primaire, $secondaire);
+}
 @mixin childrenCenter {
     display: flex;
     align-items: center;
@@ -41,6 +51,22 @@ $white: white;
     padding: 10px;
     margin: 10px;
 }
+@mixin title {
+    text-align: left;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    font-family: $font3;
+}
+@mixin title1 {
+    font-size: 0.7rem;
+    font-family: $font1;
+    letter-spacing: 1px;
+}
+@mixin forMenu {
+    text-align: left;
+    font-family: $font2;
+    padding: 0 15px;
+}
 
 * {
     margin: 0;
@@ -48,8 +74,57 @@ $white: white;
     box-sizing: border-box;
 }
 
+.loader {
+    $duree-animation: 2s;
+    $count-animation: 3;
+    position: fixed;
+    background-color: rgb(247, 235, 247);
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 300ms $duree-animation * $count-animation;
+    animation-fill-mode: forwards;
+    transform-origin: right;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        height: 100px;
+        width: 100px;
+        border-top: 5px solid $primaire;
+        border-bottom: 5px solid $secondaire;
+        border-radius: 50%;
+        animation: spin $duree-animation ease-in-out;
+        animation-iteration-count: $count-animation;
+    }
+}
+
+@keyframes disappear {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 body {
     background: $white;
     text-align: center;
     font-family: $font2;
+}
+a {
+    text-decoration: none;
 }
