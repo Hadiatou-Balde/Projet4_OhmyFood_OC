@@ -78,7 +78,7 @@ $black: black;
 }
 
 .loader {
-    $duree-animation: 2s;
+    $duree-animation: 1s;
     $count-animation: 3;
     position: fixed;
     background-color: rgb(247, 235, 247);
@@ -86,7 +86,7 @@ $black: black;
     inset: 0;
     z-index: 1;
     opacity: 0.9;
-    animation: disappear 300ms $duree-animation * $count-animation;
+    animation: disappear 200ms $duree-animation * $count-animation;
     animation-fill-mode: forwards;
     transform-origin: right;
 
@@ -126,10 +126,12 @@ $black: black;
  //Animation des menus
 @keyframes appear-menu {
     0% {
-        transform: scale(0);
+        transform: translateY(50%);
+        opacity: 0;
     }
     100% {
-        transform: scale(1);
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

@@ -89,7 +89,7 @@ main {
                             // Faire une loop pour les animations
                             @for $i from 1 through 3 {
                                 &:nth-child(#{$i}){
-                                    animation-delay: 200ms * $i;
+                                    animation-delay: 100ms * $i;
                                 }
                             }
                             display: flex;
