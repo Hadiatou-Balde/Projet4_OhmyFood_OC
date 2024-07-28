@@ -22,7 +22,7 @@ header {
 }
 
 main {
-    section {
+    section{
         width: 100%;
         img {
             width: 100%;
@@ -31,80 +31,129 @@ main {
             object-fit: cover;
         }
         .section_container {
+            @media screen and (min-width:1024px) {
+                padding: 0 130px;
+            }
             @media screen and (min-width:768px) {
                 padding: 0 130px;
-            } 
-        }
-        
-        .fixed_part {
-            position: relative;
-            padding: 2px 0;
-            width: 100%;
-            margin: -25px auto 0;
-            background: $color3;
-            border: 1px solid transparent;
-            border-radius: 40px 40px 0 0;
-            .titre {
-                @include alignChildren(space-between);
-                gap: 30%;
-                @include forMarge;
-                @include title1;
-                i {
-                    font-size: 0.9rem;
-                }
-                @media screen and (min-width:768px) {
-                    @include childrenCenter;
-                    gap: 15px;
-                }
             }
-            .Les_menus {
+            
+            .fixed_part {
+                position: relative;
+                padding: 2px 0;
+                width: 100%;
+                margin: -25px auto 0;
+                background: $color3;
+                border: 1px solid transparent;
+                border-radius: 40px 40px 0 0;
+                .titre {
+                    @include alignChildren(space-between);
+                    gap: 20%;
+                    @include forMarge;
+                    @include title1;
+                    i {
+                        font-size: 0.9rem;
+                    }
+                    @media screen and (min-width:768px) {
+                        @include childrenCenter;
+                        gap: 15px;
+                    }
+                }
+                .Les_menus {
+                    
                     @include forMenu;
                     padding: 10px;
-                .titre_menu {
-                    text-transform: uppercase;
-                    p {
-                        margin-bottom: 10px;
-                        display: inline-block;
-                        position: relative;
+                    .titre_menu {
+                        text-transform: uppercase;
+                        p {
+                            margin: 10px;
+                            font-weight: 400;
+                            display: inline-block;
+                            position: relative;
+    
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 1.3rem;
+                                height: 0.20rem;
+                                width: 2.5rem;
+                                background: $color5;
+                            }
+                        }
+                    }
+                    .menus_category {
+                        overflow: hidden;
 
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            bottom: -4px;
-                            height: 3px;
-                            width: 50%;
-                            background: $color5;
+                        .menu_items {
+                            // Faire une loop pour les animations
+                            @for $i from 1 through 3 {
+                                &:nth-child(#{$i}){
+                                    animation-delay: 200ms * $i;
+                                }
+                            }
+                            display: flex;
+                            background: $white;
+                            border-radius: 1rem;
+                            margin: 0.5rem;
+                            overflow: hidden;
+                            @include box-shadow;
+                            animation: appear-menu 1s;
+                            animation-fill-mode: both;
+                            .menu_prix {
+                                margin-left: auto;
+                                font-weight: 900;
+                                padding: 1rem;
+                                display: flex;
+                                align-items: flex-end;
+                            }
+                            .menu-description {
+                                padding: 1rem;
+                                overflow: hidden;
+                                h4, p {
+                                    // font-size: 0.9rem;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            .check-items {
+                                display: grid;
+                                place-items: center;
+                                flex-shrink: 0;
+                                $button_width: 4rem;
+                                border-radius: 0 1rem 1rem 0;
+                                background: $tertiaire;
+                                margin-right: -1 * $button_width;
+                                width: $button_width;
+                                transition: margin-right 0.5s;
+
+                                i {
+                                    display: grid;
+                                    place-items: center;
+                                    background: $white;
+                                    border-radius: 1rem;
+                                    width: 2rem;
+                                    aspect-ratio: 1;
+                                    color: $tertiaire;
+                                }
+                            }
+                            &:hover .check-items {
+                                margin-right: 0;
+                            }
                         }
-                    }
+                    }               
+                               
                 }
-                .menu_infos {
-                    width: 100%;
-                    height: 50px;
-                    border: 1px solid $white;
-                    border-radius: 10px;
-                    margin: 10px auto;
-                    padding: 10px;
-                    background: $white;
-                    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-                    .menu-entrees {   
-                        font-family: $font2;
-                        h3 {
-                            font-size: 0.75rem;
-                        }
-                    }
-                    .prix {
-                        @include alignChildren(space-between);
-                        font-size: 0.7rem;
-                    }
-                }    
+                // @media screen and (min-width:768px) {
+                //     padding: 0 100px;
+                //     margin: -20px auto 0;
+                    
+                // }    
             }
-            @media screen and (min-width:768px) {
-                padding: 0 100px;
-                margin: -20px auto 0;
-                
-            }    
         }
+        
+        
         button {
             margin: 10px 0;
             background: linear-gradient(to top right, $primaire, 50%, $secondaire);

@@ -17,6 +17,7 @@
 }
 
 //Les variables
+$opacity: 0.9;
 $font1: Shrikand, sans-serif;
 $font2: Roboto, serif;
 $font3: Roboto-bold, serif;
@@ -67,7 +68,9 @@ $black: black;
     font-family: $font2;
     padding: 0 15px;
 }
-
+@mixin box-shadow {
+    box-shadow: 2px 1px 8px -3px $color4;
+}
 * {
     margin: 0;
     padding: 0;
@@ -117,6 +120,16 @@ $black: black;
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+ //Animation des menus
+@keyframes appear-menu {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
