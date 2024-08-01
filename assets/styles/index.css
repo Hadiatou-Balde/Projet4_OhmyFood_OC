@@ -481,12 +481,12 @@ main section .section_container .fixed_part .titre {
   gap: 20%;
   padding: 10px;
   margin: 10px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-family: Shrikand, sans-serif;
   letter-spacing: 1px;
 }
 main section .section_container .fixed_part .titre i {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   main section .section_container .fixed_part .titre {
