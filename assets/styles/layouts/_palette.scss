@@ -54,9 +54,11 @@ main {
                         color: $primaire;
                         font-size: 1.5rem;
                         position: absolute;
-                        left: 10rem;
+                        right: -35rem;
+                        left: -20rem;
                         top: 50%;
                         transform: translateY(-50%);
+                        
                     }
                     .fa-solid {
                         color: transparent;

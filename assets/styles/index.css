@@ -481,7 +481,8 @@ main section .section_container .fixed_part .titre i {
   color: rgba(147, 86, 220, 0.9);
   font-size: 1.5rem;
   position: absolute;
-  left: 10rem;
+  right: -35rem;
+  left: -20rem;
   top: 50%;
   transform: translateY(-50%);
 }
