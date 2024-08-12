@@ -88,15 +88,11 @@ header {
 header nav {
   height: 80px;
   background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-header nav img {
-  width: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+header nav h1 {
+  font-family: Shrikand, sans-serif;
   margin: 0 auto;
+  padding: 0.5rem;
 }
 header .icons {
   height: 60px;
@@ -202,7 +198,7 @@ header .icons form .search_bar i {
 }
 @media screen and (min-width: 1024px) {
   .functioning h2 {
-    padding: 0 90px;
+    padding: 0 220px;
   }
 }
 .functioning .funct_container {
@@ -321,7 +317,7 @@ header .icons form .search_bar i {
 }
 @media screen and (min-width: 1024px) {
   .restaurant h2 {
-    padding: 0 90px;
+    padding: 0 220px;
   }
 }
 .restaurant .cards_restaurant a .nouveau {
@@ -358,7 +354,7 @@ header .icons form .search_bar i {
 }
 @media screen and (min-width: 768px) {
   .restaurant .cards_restaurant .card_rest {
-    width: 300px;
+    width: 325px;
     height: 250px;
   }
 }
@@ -475,26 +471,31 @@ main section .section_container .fixed_part {
   border-radius: 40px 40px 0 0;
 }
 main section .section_container .fixed_part .titre {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20%;
   padding: 10px;
   margin: 10px;
   font-size: 0.8rem;
   font-family: Shrikand, sans-serif;
-  letter-spacing: 1px;
+  position: relative;
 }
 main section .section_container .fixed_part .titre i {
-  font-size: 1rem;
+  color: rgba(147, 86, 220, 0.9);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 10rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-@media screen and (min-width: 768px) {
-  main section .section_container .fixed_part .titre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
+main section .section_container .fixed_part .titre .fa-solid {
+  color: transparent;
+  background: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+main section .section_container .fixed_part .titre .fa-solid:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
 }
 main section .section_container .fixed_part .Les_menus {
   text-align: left;
@@ -589,6 +590,7 @@ main section button {
   border-radius: 30px;
   font-size: 0.9rem;
   color: white;
+  cursor: pointer;
   transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 main section button:hover {
@@ -634,7 +636,7 @@ footer .contact_infos .infos_container {
     display: flex;
   }
 }
-footer .contact_infos .infos_container p, footer .contact_infos .infos_container i {
+footer .contact_infos .infos_container span, footer .contact_infos .infos_container i {
   font-size: 0.8rem;
 }
 footer .contact_infos .infos_container i {
